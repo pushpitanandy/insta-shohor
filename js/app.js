@@ -139,6 +139,7 @@ const showPosts = (posts) => {
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
+
 };
 
 const displayLikedPosts = () => {
@@ -154,6 +155,7 @@ const displayLikedPosts = () => {
 const displayReportedPosts = () => {
   const reportedPostsContainer = document.getElementById("reported");
   reportedPostsContainer.textContent = "";
+
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
