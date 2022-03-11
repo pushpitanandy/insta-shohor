@@ -142,18 +142,22 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  const likedPostsContainer = document.getElementById("liked");
+  likedPostsContainer.textContent = "";
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("liked").appendChild(div);
+    likedPostsContainer.appendChild(div);
   });
 };
 
 const displayReportedPosts = () => {
+  const reportedPostsContainer = document.getElementById("reported");
+  reportedPostsContainer.textContent = "";
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("reported").appendChild(div);
+    reportedPostsContainer.appendChild(div);
   });
 };
 
